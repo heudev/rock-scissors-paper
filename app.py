@@ -60,7 +60,7 @@ async def tkm(ctx):
             value=player2history,
             inline=True
         )
-        embed.set_footer(text=f"Next Player: {message['nextplayer'].name}")
+        embed.set_footer(text=f"Next Player: {message['nextplayer'].name}", icon_url=message['nextplayer'].avatar_url)
         await ctx.reply(embed=embed)
 
 
@@ -75,7 +75,7 @@ async def tkmstart(ctx, player1: discord.Member, player2: discord.Member):
         embed.color = 0xFF0000
         embed.title = "Game starting... :rock::roll_of_paper::scissors:"
         embed.description = f"{message['player1'].mention} vs {message['player2'].mention}"
-        embed.set_footer(text=f"First Player: {message['currentplayer'].name}")
+        embed.set_footer(text=f"First Player: {message['currentplayer'].name}", icon_url=message['currentplayer'].avatar_url)
         await ctx.reply(embed=embed)
 
 
